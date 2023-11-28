@@ -20,7 +20,8 @@ class HomeScreen extends StatelessWidget {
           onPressed: () {},
           child: Icon(Icons.person),
         ),
-        body: Body()
+        body: SingleChildScrollView(
+            child: Body())
     );
   }
 }

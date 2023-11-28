@@ -6,6 +6,7 @@ class Body extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    ///Day 5 to
     return Column(
       // mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -25,7 +26,7 @@ class Body extends StatelessWidget {
           ],) ,
         ),
         SizedBox(height: 20,),
-
+       ///TEXT WIDGETS
         Text(
           "Flutter is an open-source UI software development kit "
             "created by Google. It is used to develop cross platform "
@@ -55,9 +56,38 @@ class Body extends StatelessWidget {
               )
             ]
           ) ,
-        )
+        ),
+        SizedBox(height: 50,),
+        ///TEXT WIDGETS END
+        ///STACK WIDGETS START
+        Container(
+          height: 300,
+          width: 500,
+          color: Colors.blue,
+          child:Stack(
+            textDirection: TextDirection.rtl,
+            ///TASK TO DO
+            // fit: StackFit.expand,
+            // clipBehavior: Clip.antiAlias,
+            ///TASK TO END
+            children: [
+                Container(height: 300,width: 300,color: Colors.greenAccent,),
+                Positioned(
+                    top: 83,
+                    left: 70,
+                    // bottom: 30,
+                    child: Container(height: 250,width: 250,color: Colors.pink,))  ,
+                Container(height: 200,width: 200,color: Colors.black,)
+            ],
+          ),
+        ),
+        SizedBox(height: 50,),
+        ///STACK WIDGETS END
+     
       ],
     );
+
+    ///Day 1 to Day 5
     // return Column(
     //   // mainAxisAlignment:MainAxisAlignment.center,
     //   // crossAxisAlignment: CrossAxisAlignment.end,
