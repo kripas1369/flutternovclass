@@ -9,7 +9,8 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: kbackgroundColor,
+      // backgroundColor: kbackgroundColor,
+      backgroundColor: Colors.red,
         ///Drawer Section Start
         drawer: Drawers(),
         ///Drawer Section End

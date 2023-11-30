@@ -34,8 +34,26 @@ class FlutterButtons extends StatelessWidget {
               child: Text("Text Button"),
             ),
             OutlinedButton(onPressed: textButtonOnPress,
-                child:Text("outline Button"),)
+                child:Text("outline Button"),),
+            // ElevatedButton(
+            //     flutter material button decoration
+            //   /// task
+            //  // style;
+            //   ),
+            //
+            // child: Text("Elevated Button")),
 
+            MaterialButton(
+              color: Colors.red,
+              minWidth: 200,
+              height: 100,
+              onPressed: (){},
+              ///task
+              // shape: ShapeBorder(),
+              elevation: 10,
+              child: Text("Material Button"),
+            ),
+            IconButton(onPressed: (){}, icon: Icon(Icons.snowmobile))
           ],
         ),
       ),
