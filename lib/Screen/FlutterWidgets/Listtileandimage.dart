@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutternovclass/Constant/images.dart';
 
 class TestScreen extends StatelessWidget {
   const TestScreen({super.key});
@@ -8,6 +9,8 @@ class TestScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(backgroundColor: Colors.red,),
       body: Column(children: [
+        // Image.asset("assets/images/flutter.png",height: 100,),
+        Image.asset(AppImages.flutterlogo),
         ListTile(
           iconColor: Colors.red,
           focusColor: Colors.red,
@@ -57,15 +60,17 @@ class TestScreen extends StatelessWidget {
               children: [
                 CircleAvatar(
                   radius: 40,
-                  backgroundImage: NetworkImage(
-                    "https://media.licdn.com/dms/image/D4D03AQFQZy0RBSZJNQ/profile-displayphoto-shrink_400_400/0/1698301584532?e=2147483647&v=beta&t=1p_qs4GiH9hGq4WTCLzPPRd7qbNLYWWiphprVB5-fKQ"
-                  ),
+                  // backgroundImage: NetworkImage(
+                  //   "https://media.licdn.com/dms/image/D4D03AQFQZy0RBSZJNQ/profile-displayphoto-shrink_400_400/0/1698301584532?e=2147483647&v=beta&t=1p_qs4GiH9hGq4WTCLzPPRd7qbNLYWWiphprVB5-fKQ"
+                  // ),
+                  backgroundImage: AssetImage(AppImages.flutterlogo),
                 ),
               ],
             ) ,
           ),
 
-        )
+        ),
+
       ],),
     );
   }
