@@ -3,6 +3,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutternovclass/Constant/images.dart';
+import 'package:flutternovclass/Screen/PrimaryScreen/LoginScreen/body.dart';
 import 'package:flutternovclass/Screen/SecondaryScreen/HomeScreen/body.dart';
 
 class S_body extends StatefulWidget {
@@ -18,7 +19,7 @@ class _S_bodyState extends State<S_body> {
     Timer(Duration(seconds: 4),
           (){Navigator.pushReplacement(
           context,
-          MaterialPageRoute(builder: (context) => HomeScreen()),
+          MaterialPageRoute(builder: (context) => LoginScreen()),
         );
       },
     );
