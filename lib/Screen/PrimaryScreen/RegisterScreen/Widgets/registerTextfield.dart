@@ -122,7 +122,7 @@ class RegisterTextfield extends StatelessWidget {
                 )
                   ;},
                 child: CustomText(
-                  text: "Already have account?",
+                  text: "Already have an account?",
                 ),
               ),
               Spacer(),
