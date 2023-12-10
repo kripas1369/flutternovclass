@@ -126,7 +126,7 @@ class RegisterTextfield extends StatelessWidget {
                 ),
               ),
               Spacer(),
-              CustomText(text: "Forgot Password",),
+              CustomText(text: "Forgot Passwords",),
               Spacer(),
             ],
           ),
