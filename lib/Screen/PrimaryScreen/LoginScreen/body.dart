@@ -3,7 +3,6 @@ import 'package:flutternovclass/Constant/constColor.dart';
 
 import 'Screen/loginScreen.dart';
 
-
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
 
@@ -12,11 +11,8 @@ class LoginScreen extends StatelessWidget {
     return Scaffold(
         backgroundColor: kbackgroundColor,
         body: Padding(
-          padding: const EdgeInsets.only(left: 20,right: 20),
-          child: SingleChildScrollView(
-              child: L_Body()),
-        )
-    );
+          padding: const EdgeInsets.only(left: 19, right: 19),
+          child: SingleChildScrollView(child: L_Body()),
+        ));
   }
 }
-
