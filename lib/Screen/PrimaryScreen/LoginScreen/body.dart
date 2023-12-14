@@ -12,7 +12,9 @@ class LoginScreen extends StatelessWidget {
         backgroundColor: kbackgroundColor,
         body: Padding(
           padding: const EdgeInsets.only(left: 19, right: 19),
-          child: SingleChildScrollView(child: L_Body()),
+          child: SingleChildScrollView(
+              // physics: NeverScrollableScrollPhysics(),
+              child: L_Body()),
         ));
   }
 }

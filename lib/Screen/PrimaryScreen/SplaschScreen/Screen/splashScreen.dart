@@ -17,7 +17,8 @@ class _S_bodyState extends State<S_body> {
   void initState() {
     super.initState();
     Timer(Duration(seconds: 4),
-          (){Navigator.pushReplacement(
+          (){
+      Navigator.pushReplacement(
           context,
           MaterialPageRoute(builder: (context) => LoginScreen()),
         );

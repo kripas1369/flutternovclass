@@ -1,0 +1,20 @@
+////
+git add .
+git status
+git commit -m "your commit"
+git push origin <branch name>
+git pull origin <brach name?
+///
+
+
+git branch <create>
+git checkout <branch name>
+git merge <branch name?
+
+
+//retrive
+git reflog
+git checkout <sdfkshdkjfs>
+
+
+git clone <urls>
