@@ -12,62 +12,31 @@ class RegisterTextfield extends StatelessWidget {
   Widget build(BuildContext context) {
     final TextEditingController emailController = TextEditingController();
     final TextEditingController passwordController = TextEditingController();
-    final TextEditingController conformpasswordController = TextEditingController();
+    final TextEditingController conformpasswordController =
+        TextEditingController();
     final TextEditingController nameController = TextEditingController();
-    final TextEditingController numberController =TextEditingController();
+    final TextEditingController numberController = TextEditingController();
     final formKey = GlobalKey<FormState>();
     return Form(
-      key:formKey,
+      key: formKey,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           TextFormField(
             // autocorrect: true,
-             autofocus: true,
-             showCursor: true,
-             // textAlign: TextAlign.center,
-             textCapitalization: TextCapitalization.sentences,
-             keyboardType: TextInputType.emailAddress,
-              textInputAction:TextInputAction.next,
-              controller: emailController,
-              cursorColor: Colors.red,
-              // cursorRadius: Radius.circular(20),
-              // cursorWidth: 100.3,
-              decoration: customDecoration(hintText:"Email"),
-            validator: (value){
-               if(value==null || value.isEmpty){
-                 return "Please enter your email";
-               }
-               return null;
-            },
-          ),
-          TextSizeBox(),
-          TextFormField(
-              textInputAction:TextInputAction.next,
-              maxLines: 1,
-              ///Task
-              //AutoExpandTextfield
-              controller: nameController,
-              decoration: customDecoration(hintText:"Name"),
-              validator: (value){
-    if(value==null || value.isEmpty){
-    return "Please enter your email";
-    }
-    return null;
-    },
-          ),
-          TextSizeBox(),
-          TextFormField(
-              textInputAction:TextInputAction.next,
-              maxLength: 10,
-              ///Task
-              // validate the number wiht out 0/10"
-              /// Task
-              keyboardType:TextInputType.number ,
-              controller: numberController,
-              decoration: customDecoration(hintText:"Mobile Number"),
-            validator: (value){
-              if(value==null || value.isEmpty){
+            autofocus: true,
+            showCursor: true,
+            // textAlign: TextAlign.center,
+            textCapitalization: TextCapitalization.sentences,
+            keyboardType: TextInputType.emailAddress,
+            textInputAction: TextInputAction.next,
+            controller: emailController,
+            cursorColor: Colors.red,
+            // cursorRadius: Radius.circular(20),
+            // cursorWidth: 100.3,
+            decoration: customDecoration(hintText: "Email"),
+            validator: (value) {
+              if (value == null || value.isEmpty) {
                 return "Please enter your email";
               }
               return null;
@@ -75,62 +44,99 @@ class RegisterTextfield extends StatelessWidget {
           ),
           TextSizeBox(),
           TextFormField(
-              textInputAction:TextInputAction.next,
-              obscureText: true,
-              ///Task change this dot on password obscuretext with #####
-              controller: passwordController,
-              decoration: customDecoration(hintText: "Password"),
-            validator: (value){
-              if(value==null || value.isEmpty){
-                return "Please enter your email";
+            textInputAction: TextInputAction.next,
+            maxLines: 1,
+
+            ///Task
+            //AutoExpandTextfield
+            controller: nameController,
+            decoration: customDecoration(hintText: "Name"),
+            validator: (value) {
+              if (value == null || value.isEmpty) {
+                return "Please enter your name";
               }
               return null;
             },
           ),
           TextSizeBox(),
           TextFormField(
-              controller: conformpasswordController,
-              decoration: customDecoration(hintText: "Conform Password"),
-            validator: (value){
-              if(value==null || value.isEmpty){
-                return "Please enter your email";
+            textInputAction: TextInputAction.next,
+            maxLength: 10,
+
+            ///Task
+            // validate the number wiht out 0/10"
+            /// Task
+            keyboardType: TextInputType.number,
+            controller: numberController,
+            decoration: customDecoration(hintText: "Mobile Number"),
+            validator: (value) {
+              if (value == null || value.isEmpty) {
+                return "Please enter your mobile number";
+              }
+              return null;
+            },
+          ),
+          TextSizeBox(),
+          TextFormField(
+            textInputAction: TextInputAction.next,
+            obscureText: true,
+
+            ///Task change this dot on password obscuretext with #####
+            controller: passwordController,
+            decoration: customDecoration(hintText: "Password"),
+            validator: (value) {
+              if (value == null || value.isEmpty) {
+                return "Please enter your password";
+              }
+              return null;
+            },
+          ),
+          TextSizeBox(),
+          TextFormField(
+            controller: conformpasswordController,
+            decoration: customDecoration(hintText: "Conform Password"),
+            validator: (value) {
+              if (value == null || value.isEmpty) {
+                return "Please enter your password";
               }
               return null;
             },
           ),
           TextSizeBox(),
           InkWell(
-              onTap: ()async{
-                if(formKey.currentState!.validate()){
+              onTap: () async {
+                if (formKey.currentState!.validate()) {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) =>LoginScreen()),
+                    MaterialPageRoute(builder: (context) => LoginScreen()),
                   );
-                }
-                else{}
+                } else {}
               },
               child: DefaultButton()),
           Row(
-
             children: [
               Spacer(),
               InkWell(
-                onTap: (){
+                onTap: () {
                   Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) =>LoginScreen()),
-                )
-                  ;},
+                    context,
+                    MaterialPageRoute(builder: (context) => LoginScreen()),
+                  );
+                },
                 child: CustomText(
                   text: "Already have an account?",
                 ),
               ),
               Spacer(),
-              CustomText(text: "Forgot Passwords",),
+              CustomText(
+                text: "Forgot Passwords",
+              ),
               Spacer(),
             ],
           ),
-          SizedBox(height: 40,)
+          SizedBox(
+            height: 40,
+          )
         ],
       ),
     );
