@@ -3,6 +3,7 @@ import 'package:flutternovclass/Screen/FlutterWidgets/Listtileandimage.dart';
 import 'package:flutternovclass/Screen/PrimaryScreen/SplaschScreen/body.dart';
 import 'package:flutternovclass/Widgets/defaultButton.dart';
 import 'package:flutternovclass/product.dart';
+import 'package:flutternovclass/productdetails.dart';
 import 'package:flutternovclass/test.dart';
 
 import 'Screen/FlutterWidgets/flutter_button.dart';
